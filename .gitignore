@@ -1,0 +1,11 @@
+# Never commit real LinkedIn exports or backups
+*.zip
+Connections*.csv
+!sample/Connections.csv
+messages*.csv
+!sample/messages.csv
+reconnect-hq-backup-*.json
+reconnect-hq-*.csv
+.DS_Store
+node_modules/
+_site/

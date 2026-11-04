@@ -1,0 +1,64 @@
+Notes:
+"This is fictional sample data for Reconnect HQ. It follows the format of LinkedIn's Connections.csv."
+
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
+Finley,Fictive,https://www.linkedin.com/in/finley-fictive-demo,,Northwind Learning,VP of Product,17 Jul 2026
+Sage,Fictive,https://www.linkedin.com/in/sage-fictive-demo,,Woodgrove Studio,Content Strategist,22 Jun 2026
+Kenji,Sampleton,https://www.linkedin.com/in/kenji-sampleton-demo,,Blue Yonder Robotics,Content Strategist,06 Feb 2026
+Amara,Prototype,https://www.linkedin.com/in/amara-prototype-demo,,Fabrikam Labs,UX Researcher,04 Jan 2026
+Reese,Pretendson,https://www.linkedin.com/in/reese-pretendson-demo,,Blue Yonder Robotics,Chief Product Officer,11 Nov 2025
+Hayden,Placeholder,https://www.linkedin.com/in/hayden-placeholder-demo,,Alpine Ski House,Founder & CEO,25 Oct 2025
+Casey,Pretendson,https://www.linkedin.com/in/casey-pretendson-demo,,Alpine Ski House,Product Manager,06 Oct 2025
+Parker,Dummyworth,https://www.linkedin.com/in/parker-dummyworth-demo,,Fabrikam Labs,Content Strategist,08 Sep 2025
+Shiloh,Placeholder,https://www.linkedin.com/in/shiloh-placeholder-demo,,Northwind Learning,Content Strategist,19 Aug 2025
+Lucia,Sketchley,https://www.linkedin.com/in/lucia-sketchley-demo,,Contoso Health,Engineering Manager,04 Aug 2025
+Arden,Sampleton,https://www.linkedin.com/in/arden-sampleton-demo,,Trey Research,Staff Software Engineer,08 Jun 2025
+Lennox,Sketchley,https://www.linkedin.com/in/lennox-sketchley-demo,,Tailspin Analytics,Recruiter,27 May 2025
+Lennox,Notreal,https://www.linkedin.com/in/lennox-notreal-demo,,Contoso Health,Learning Experience Designer,16 May 2025
+Freya,Imaginary,https://www.linkedin.com/in/freya-imaginary-demo,,Alpine Ski House,Technical Program Manager,31 Mar 2025
+Remy,Example,https://www.linkedin.com/in/remy-example-demo,,Alpine Ski House,Technical Program Manager,23 Feb 2025
+Hayden,Lorem,https://www.linkedin.com/in/hayden-lorem-demo,,Wide World Media,Customer Success Lead,11 Feb 2025
+Reese,Example,https://www.linkedin.com/in/reese-example-demo,,Litware Ed,Group PM,06 Feb 2025
+Amara,Sampleton,https://www.linkedin.com/in/amara-sampleton-demo,,Margie's Travel,Marketing Director,30 Nov 2024
+Ellis,Dummyworth,https://www.linkedin.com/in/ellis-dummyworth-demo,,Lamna Learning,Engineering Manager,27 Nov 2024
+Ines,Dummyworth,https://www.linkedin.com/in/ines-dummyworth-demo,,Tailspin Analytics,Recruiter,23 Nov 2024
+Finley,Sampleton,https://www.linkedin.com/in/finley-sampleton-demo,,Woodgrove Studio,Engineering Manager,21 Oct 2024
+Jules,Pretendson,https://www.linkedin.com/in/jules-pretendson-demo,,Coho Vineyard,Customer Success Lead,16 Jul 2024
+Jordan,Imaginary,https://www.linkedin.com/in/jordan-imaginary-demo,,Blue Yonder Robotics,Chief Product Officer,24 May 2024
+Jules,Placeholder,https://www.linkedin.com/in/jules-placeholder-demo,,Contoso Health,Technical Program Manager,20 Apr 2024
+Omar,Notreal,https://www.linkedin.com/in/omar-notreal-demo,,Adventure Works,Engineering Manager,12 Apr 2024
+Remy,Fictive,https://www.linkedin.com/in/remy-fictive-demo,,Trey Research,Marketing Director,02 Jan 2024
+Dakota,Notreal,https://www.linkedin.com/in/dakota-notreal-demo,,Alpine Ski House,Group PM,15 Nov 2023
+Jordan,Example,https://www.linkedin.com/in/jordan-example-demo,,Coho Vineyard,UX Researcher,25 Aug 2023
+Casey,Notreal,https://www.linkedin.com/in/casey-notreal-demo,,Lamna Learning,Partnerships Lead,19 Dec 2022
+Marlowe,Ipsumsen,https://www.linkedin.com/in/marlowe-ipsumsen-demo,,Trey Research,Engineering Manager,04 Oct 2022
+Ines,Prototype,https://www.linkedin.com/in/ines-prototype-demo,,Blue Yonder Robotics,Engineering Manager,22 Sep 2022
+Finley,Demowalker,https://www.linkedin.com/in/finley-demowalker-demo,,Northwind Learning,Director of Product,14 Sep 2022
+Mateo,Dummyworth,https://www.linkedin.com/in/mateo-dummyworth-demo,,Fabrikam Labs,Engineering Manager,10 Sep 2022
+Omar,Demowalker,https://www.linkedin.com/in/omar-demowalker-demo,,Contoso Health,Chief Product Officer,06 Sep 2022
+Mateo,Madeup,https://www.linkedin.com/in/mateo-madeup-demo,,Lamna Learning,Senior Product Manager,15 Jun 2022
+Kendall,Fictive,https://www.linkedin.com/in/kendall-fictive-demo,,Contoso Health,Director of Product,09 May 2022
+Freya,Lorem,https://www.linkedin.com/in/freya-lorem-demo,,Trey Research,Marketing Director,26 Apr 2022
+Rowan,Sketchley,https://www.linkedin.com/in/rowan-sketchley-demo,,Contoso Health,Staff Software Engineer,16 Apr 2022
+Jules,Prototype,https://www.linkedin.com/in/jules-prototype-demo,,Fabrikam Labs,Head of Product,12 Apr 2022
+Emerson,Madeup,https://www.linkedin.com/in/emerson-madeup-demo,,Woodgrove Studio,Technical Program Manager,30 Jan 2022
+Lucia,Fictive,https://www.linkedin.com/in/lucia-fictive-demo,,Adventure Works,Staff Software Engineer,01 Dec 2021
+Kenji,Mockford,https://www.linkedin.com/in/kenji-mockford-demo,,Fourth Coffee,Director of Product,30 Nov 2021
+Casey,Testerly,https://www.linkedin.com/in/casey-testerly-demo,,Litware Ed,VP of Product,03 Nov 2021
+Amara,Notreal,https://www.linkedin.com/in/amara-notreal-demo,,Blue Yonder Robotics,Partnerships Lead,30 Sep 2021
+Morgan,Dummyworth,https://www.linkedin.com/in/morgan-dummyworth-demo,,Alpine Ski House,Chief Product Officer,23 Aug 2021
+Rowan,Pretendson,https://www.linkedin.com/in/rowan-pretendson-demo,,Adventure Works,Data Scientist,05 Jul 2021
+Shiloh,Imaginary,https://www.linkedin.com/in/shiloh-imaginary-demo,,Litware Ed,Chief Product Officer,31 May 2021
+Ines,Sketchley,https://www.linkedin.com/in/ines-sketchley-demo,,Blue Yonder Robotics,Director of Product,10 May 2021
+Skyler,Example,https://www.linkedin.com/in/skyler-example-demo,,Litware Ed,UX Researcher,05 May 2021
+Shiloh,Fictive,https://www.linkedin.com/in/shiloh-fictive-demo,,Alpine Ski House,Product Manager,19 Apr 2021
+Morgan,Testerly,https://www.linkedin.com/in/morgan-testerly-demo,,Alpine Ski House,Data Scientist,19 Mar 2021
+Casey,Demowalker,https://www.linkedin.com/in/casey-demowalker-demo,,Alpine Ski House,Head of Product,15 Jan 2021
+Emerson,Fictive,https://www.linkedin.com/in/emerson-fictive-demo,,Northwind Learning,Learning Experience Designer,28 Nov 2020
+Jordan,Testerly,https://www.linkedin.com/in/jordan-testerly-demo,,Lamna Learning,Group PM,09 Nov 2020
+Omar,Example,https://www.linkedin.com/in/omar-example-demo,,Blue Yonder Robotics,Director of Product,09 Nov 2020
+Kenji,Demowalker,https://www.linkedin.com/in/kenji-demowalker-demo,,Contoso Health,Data Scientist,16 Jul 2020
+Harper,Madeup,https://www.linkedin.com/in/harper-madeup-demo,,Litware Ed,VP of Product,01 Jul 2020
+Ines,Fictive,https://www.linkedin.com/in/ines-fictive-demo,,Coho Vineyard,Customer Success Lead,03 Dec 2019
+Hayden,Sketchley,https://www.linkedin.com/in/hayden-sketchley-demo,,Northwind Learning,Recruiter,13 Oct 2019
+Harper,Pretendson,https://www.linkedin.com/in/harper-pretendson-demo,,Contoso Health,Content Strategist,30 Sep 2019

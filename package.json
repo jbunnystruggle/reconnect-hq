@@ -1,0 +1,13 @@
+{
+  "name": "reconnect-hq",
+  "version": "1.0.0",
+  "description": "Work through your LinkedIn connections: rate relationships, track outreach, snooze, and take notes. Runs entirely in your browser.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "python3 -m http.server 8000",
+    "sample": "python3 tools/make_sample.py"
+  }
+}

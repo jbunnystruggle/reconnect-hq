@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reconnect HQ</title>
+<meta name="description" content="Work through your LinkedIn connections: rate relationships, track outreach, snooze, take notes. Runs entirely in your browser.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="topbar">
+      <p class="eyebrow">Outreach workbench</p>
+      <nav class="menu" aria-label="Data and settings" id="menu" hidden>
+        <button class="ghost" id="btn-import">⇪ Import update</button>
+        <button class="ghost" id="btn-export">⤓ Export CSV</button>
+        <button class="ghost" id="btn-backup">Back up</button>
+        <button class="ghost" id="btn-restore">Restore</button>
+        <button class="ghost" id="btn-settings">⚙ Settings</button>
+      </nav>
+    </div>
+    <h1>Reconnect <span class="accent">HQ</span></h1>
+    <p class="lede" id="lede">Work through your LinkedIn network: rate each relationship, set a status, snooze, and take notes. Everything stays in this browser.</p>
+    <div id="banner"></div>
+    <div class="statrow" id="stats" hidden></div>
+  </header>
+
+  <section class="importer" id="importer" hidden>
+    <h2>Bring in your LinkedIn connections</h2>
+    <p>Drop LinkedIn's data export here — the whole <code>.zip</code>, or <code>Connections.csv</code> plus <code>messages.csv</code>. Files are read in your browser and never uploaded.</p>
+    <div class="drop" id="drop">
+      <strong>Drop your export here</strong>
+      <span>or</span>
+      <button class="btn primary" id="btn-choose">Choose files</button>
+      <button class="btn" id="btn-demo">Try with sample data</button>
+      <div class="hint">.zip, Connections.csv, messages.csv</div>
+    </div>
+    <ol class="steps">
+      <li>On LinkedIn, open <strong>Settings &amp; Privacy → Data privacy → Get a copy of your data</strong>.</li>
+      <li>Choose <strong>Connections</strong> and <strong>Messages</strong> (or the full archive) and request it. LinkedIn emails a download link, usually within minutes.</li>
+      <li>Drop the downloaded file above. Re-import a newer export any time — your ratings, statuses, and notes are kept, and job changes get flagged.</li>
+    </ol>
+    <p class="privacy">Privacy: this page has no server. Your connections and notes are saved only in this browser's local storage. Use <strong>Back up</strong> to move them to another browser.</p>
+  </section>
+
+  <div id="app" hidden>
+    <div class="filters"><div class="tabs" id="tabs"></div></div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search name, company, title, or notes…" aria-label="Search contacts">
+      <select id="sort" aria-label="Sort contacts">
+        <option value="score">Sort: priority</option>
+        <option value="stars">Sort: stars</option>
+        <option value="recent">Sort: most recent message</option>
+        <option value="msgs">Sort: most messages</option>
+        <option value="connected">Sort: recently connected</option>
+        <option value="name">Sort: name</option>
+      </select>
+      <button class="kbd-btn" id="btn-keys" title="Keyboard shortcuts">⌨ Keys</button>
+      <span class="savebox"><span class="save-msg" id="save-msg">Saved in this browser</span></span>
+    </div>
+    <div class="count" id="count" aria-live="polite"></div>
+    <div class="list" id="list"></div>
+    <button class="btn more" id="more" hidden>Show more</button>
+    <div class="empty" id="empty" hidden>No one matches — try another filter or spelling.</div>
+  </div>
+
+  <footer>
+    <strong>Reconnect HQ</strong> — open source, runs entirely in your browser. No account, no server, no tracking.
+    Stars reflect relationship strength: ★ name recognition, ★★ real exchange, ★★★ would pick up the phone.
+    Priority sorting uses LinkedIn message history only, so relationships you keep up elsewhere won't rank by it.
+    <span id="footer-meta"></span>
+  </footer>
+</div>
+
+<input type="file" id="file-import" accept=".zip,.csv" multiple hidden>
+<input type="file" id="file-restore" accept=".json,application/json" hidden>
+
+<dialog id="dlg-settings" aria-labelledby="settings-title">
+  <form method="dialog" class="dlg" id="settings-form">
+    <h2 id="settings-title">Settings</h2>
+    <div class="row">
+      <div><label for="set-goal">Weekly outreach goal</label><input type="number" id="set-goal" min="1" max="100"></div>
+      <div><label for="set-follow">Follow up after (days)</label><input type="number" id="set-follow" min="1" max="90"></div>
+    </div>
+    <h3>Message templates</h3>
+    <p class="help">Placeholders: <code>{first}</code> <code>{name}</code> <code>{company}</code> <code>{position}</code>. Edits to a single card's draft are kept for that person.</p>
+    <label for="set-tpl-history">When you've messaged before</label>
+    <textarea id="set-tpl-history"></textarea>
+    <label for="set-tpl-fresh">When you haven't messaged on LinkedIn</label>
+    <textarea id="set-tpl-fresh"></textarea>
+    <h3>Tags</h3>
+    <p class="help">Tags appear as filters and on cards. Add keywords to auto-tag by job title (comma-separated); you can always add or remove a tag on any card.</p>
+    <div id="tag-rows"></div>
+    <button type="button" class="btn small" id="btn-add-tag">+ Add tag</button>
+    <div class="actions">
+      <button type="button" class="btn small danger" id="btn-clear">Delete all data in this browser</button>
+      <span><button type="button" class="btn" id="btn-settings-cancel">Cancel</button> <button type="submit" class="btn primary" id="btn-settings-save" value="save">Save settings</button></span>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="dlg-keys" aria-labelledby="keys-title">
+  <form method="dialog" class="dlg">
+    <h2 id="keys-title">Keyboard shortcuts</h2>
+    <p class="help">Work through the list without the mouse. Shortcuts are off while you're typing in a field.</p>
+    <div class="keys">
+      <span><kbd>j</kbd> / <kbd>k</kbd></span><span>Next / previous card</span>
+      <span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></span><span>Rate ★ / ★★ / ★★★ (<kbd>0</kbd> clears)</span>
+      <span><kbd>r</kbd></span><span>Status: To reach out</span>
+      <span><kbd>e</kbd></span><span>Status: Sent</span>
+      <span><kbd>y</kbd></span><span>Status: Replied</span>
+      <span><kbd>m</kbd></span><span>Status: Meeting booked</span>
+      <span><kbd>x</kbd></span><span>Status: Skip</span>
+      <span><kbd>z</kbd></span><span>Snooze 7 days (<kbd>Z</kbd> = 30 days)</span>
+      <span><kbd>u</kbd></span><span>Clear status</span>
+      <span><kbd>n</kbd></span><span>Write a note</span>
+      <span><kbd>d</kbd></span><span>Open the draft message</span>
+      <span><kbd>o</kbd></span><span>Open LinkedIn profile</span>
+      <span><kbd>/</kbd></span><span>Search</span>
+      <span><kbd>?</kbd></span><span>This list</span>
+    </div>
+    <div class="actions"><span></span><button class="btn primary" value="close">Got it</button></div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
